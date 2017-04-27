@@ -57,6 +57,12 @@ config BR2_TARGET_UBOOT_CUSTOM_HG
 config BR2_TARGET_UBOOT_CUSTOM_SVN
 	bool "Custom Subversion repository"
 
+config BR2_TARGET_UBOOT_CUSTOM_LOCAL
+	bool "Local directory"
+	help
+	  This option allows Buildroot to get the uboot source
+	  code from a local directory.
+
 endchoice
 
 config BR2_TARGET_UBOOT_CUSTOM_VERSION_VALUE
@@ -84,6 +90,12 @@ config BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION
 
 endif
 
+config BR2_TARGET_UBOOT_CUSTOM_LOCAL_PATH
+	string "Path to the local directory"
+	depends on BR2_TARGET_UBOOT_CUSTOM_LOCAL
+	help
+	  Path to the local directory with the Linux kernel source code.
+
 config BR2_TARGET_UBOOT_VERSION
 	string
 	default "2017.01"	if BR2_TARGET_UBOOT_LATEST_VERSION
@@ -96,6 +108,7 @@ config BR2_TARGET_UBOOT_VERSION
 config BR2_TARGET_UBOOT_PATCH
 	string "Custom U-Boot patches"
 	default BR2_TARGET_UBOOT_CUSTOM_PATCH_DIR if BR2_TARGET_UBOOT_CUSTOM_PATCH_DIR != ""  # legacy
+	depends on !BR2_TARGET_UBOOT_CUSTOM_LOCAL
 	help
 	  A space-separated list of patches to apply to U-Boot.
 	  Each patch can be described as an URL, a local file path,
