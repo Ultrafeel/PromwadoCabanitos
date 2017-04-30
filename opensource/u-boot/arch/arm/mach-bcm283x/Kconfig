@@ -111,18 +111,13 @@ config TARGET_RPI_3
 	  This option creates a build targetting the ARMv8/AArch64 ISA.
 	select BCM2837_64B
 
+config TARGET_CABANITOS
+        bool "Cabanitos board based on Raspberry Pi 3"
+        help
+          This board based on Raspberry Pi 3 for PromwadoCabanitos
+          project.
+        select BCM2837_32B
+
 endchoice
-
-config SYS_BOARD
-	default "rpi"
-
-config SYS_VENDOR
-	default "raspberrypi"
-
-config SYS_SOC
-	default "bcm283x"
-
-config SYS_CONFIG_NAME
-	default "rpi"
 
 endmenu
