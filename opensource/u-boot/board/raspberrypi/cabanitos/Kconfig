@@ -1,0 +1,15 @@
+if TARGET_CABANITOS
+
+config SYS_BOARD
+	default "cabanitos"
+
+config SYS_VENDOR
+	default "raspberrypi"
+
+config SYS_SOC
+	default "bcm283x"
+
+config SYS_CONFIG_NAME
+	default "cabanitos"
+
+endif

@@ -1,0 +1,15 @@
+if TARGET_RPI_3_32b
+
+config SYS_BOARD
+        default "rpi"
+
+config SYS_VENDOR
+        default "raspberrypi"
+
+config SYS_SOC
+        default "bcm283x"
+
+config SYS_CONFIG_NAME
+        default "rpi"
+
+endif

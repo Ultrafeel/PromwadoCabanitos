@@ -1,0 +1,6 @@
+CABANITOS BOARD
+M:	Alexander Skripko <alexander.skripko@promwad.com>
+S:	Maintained
+F:	board/raspberrypi/cabanitos/
+F:	include/configs/cabanitos.h
+F:	configs/cabanitos_defconfig
