@@ -1,0 +1,8 @@
+config BR2_PACKAGE_KERNEL_HELLO_IRQ
+
+        bool "kernel_hello_irq"
+        help
+          This is a comment that explains what libfoo is. The help text
+          should be wrapped.
+
+          http://foosoftware.org/libfoo/
