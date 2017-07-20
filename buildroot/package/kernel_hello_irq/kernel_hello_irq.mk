@@ -34,7 +34,7 @@ define KERNEL_HELLO_IRQ_INSTALL_TARGET_CMDS
 @echo ooo LINUX_VERSION_PROBED =$(LINUX_VERSION_PROBED) oo TARGET_DIR= $(TARGET_DIR), KERNEL_VERSION =$(KERNEL_VERSION) , LINUX_DIR=$(LINUX_DIR) ooo
 @echo ooo LINUX_VERSION = $(LINUX_VERSION ) BINARIES_DIR=$(BINARIES_DIR) BASE_DIR=$(BASE_DIR) ooo
 #kernel_hello_irq.ko ./$(TARGETDIR)/lib/modules/$(KERNEL_VERSION)/
-$(INSTALL) -D -m 0755 $(@D)/kernel_hello_irq.ko $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/
+#$(INSTALL) -D -m 0755 $(@D)/kernel_hello_irq.ko $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/
 $(INSTALL) -D -m 0755 $(@D)/S11load_kernel_hello_irq.sh $(TARGET_DIR)/etc/init.d/
 $(INSTALL) -D -m 0755 $(@D)/test.sh $(TARGET_DIR)/bin/test_hello_irq.sh
 endef
