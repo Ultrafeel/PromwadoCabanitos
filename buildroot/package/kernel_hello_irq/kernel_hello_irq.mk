@@ -21,18 +21,7 @@ KERNEL_HELLO_IRQ_MAKE = $(MAKE1)
 #	$(if $(BR2_PACKAGE_GNUTLS),gnutls) \
 #	$(if $(BR2_PACKAGE_JSON_C),json-c)
 
-ifeq ($(BR2_bfin),y)
-# ld symbol versioning not working on bfin
-#KERNEL_HELLO_IRQ_CONF_ENV += ac_cv_prog_ld_version_script=no
-endif
 
-#$(LINUX_DIR)
-#4.9.6
-#$(shell uname -r)  $(LINUX_DIR)
-
-
-#KERNEL_HELLO_IRQ_SITE:= /home/chris/MELP/helloworld/
-#KERNEL_HELLO_IRQ_SITE_METHOD:=local
 KERNEL_HELLO_IRQ_INSTALL_TARGET:=YES
 
 #define KERNEL_HELLO_IRQ_BUILD_CMDS
@@ -53,4 +42,3 @@ endef
 $(eval $(kernel-module))
 $(eval $(generic-package))
 
-#$(eval $(autotools-package))
