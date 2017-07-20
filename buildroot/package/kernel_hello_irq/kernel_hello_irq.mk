@@ -13,6 +13,9 @@ KERNEL_HELLO_IRQ_LICENSE = GPLv2
 KERNEL_HELLO_IRQ_LICENSE_FILES = LICENSE
 KERNEL_HELLO_IRQ_INSTALL_STAGING = YES
 KERNEL_HELLO_IRQ_MAKE = $(MAKE1)
+#FOO_LICENSE_FILES = COPYING
+
+
 #KERNEL_HELLO_IRQ_DEPENDENCIES = \
 #	host-pkgconf protobuf-c \
 #	$(if $(BR2_PACKAGE_GNUTLS),gnutls) \
@@ -31,11 +34,13 @@ endif
 #KERNEL_HELLO_IRQ_SITE:= /home/chris/MELP/helloworld/
 #KERNEL_HELLO_IRQ_SITE_METHOD:=local
 KERNEL_HELLO_IRQ_INSTALL_TARGET:=YES
-define KERNEL_HELLO_IRQ_BUILD_CMDS
-echo ___TARGET_DIR= $(TARGET_DIR), LINUX_DIR=$(LINUX_DIR)___
 
-$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" LINUX_DIR="$(LINUX_DIR)" -C $(@D) all
-endef
+#define KERNEL_HELLO_IRQ_BUILD_CMDS
+#echo ___TARGET_DIR= $(TARGET_DIR), LINUX_DIR=$(LINUX_DIR)___
+##CC="$(TARGET_CC)" LD="$(TARGET_LD)" 
+#$(MAKE) TARGET_CONFIGURE_OPTS=$(TARGET_CONFIGURE_OPTS) LINUX_DIR="$(LINUX_DIR)" ARCH=$(KERNEL_ARCH) -C $(@D) all
+#endef
+
 define KERNEL_HELLO_IRQ_INSTALL_TARGET_CMDS
 #$(ECHO) TARGET_DIR= $(TARGET_DIR), KERNEL_VERSION =$(KERNEL_VERSION) , LINUX_DIR=$(LINUX_DIR)
 
@@ -44,6 +49,8 @@ $(INSTALL) -D -m 0755 $(@D)/kernel_hello_irq.ko $(TARGET_DIR)/lib/modules/$(KERN
 $(INSTALL) -D -m 0755 $(@D)/S11load_kernel_hello_irq.sh $(TARGET_DIR)/etc/init.d/
 $(INSTALL) -D -m 0755 $(@D)/test.sh $(TARGET_DIR)/root/
 endef
+
+$(eval $(kernel-module))
 $(eval $(generic-package))
 
 #$(eval $(autotools-package))
