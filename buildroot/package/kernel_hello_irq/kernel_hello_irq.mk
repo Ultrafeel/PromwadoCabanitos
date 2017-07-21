@@ -4,11 +4,11 @@
 #
 ################################################################################
 
-KERNEL_HELLO_IRQ_VERSION = 1.8	
-#KERNEL_HELLO_IRQ_SOURCE = v$(KERNEL_HELLO_IRQ_VERSION).tar.gz
-#KERNEL_HELLO_IRQ_SITE = https://github.com/Ultrafeel/kernel_hello_irq/archive
-KERNEL_HELLO_IRQ_SITE:= /home/unencr/Prog_projects/kernel_hello_irq
-KERNEL_HELLO_IRQ_SITE_METHOD:=local
+KERNEL_HELLO_IRQ_VERSION = b1.3	
+KERNEL_HELLO_IRQ_SOURCE = v$(KERNEL_HELLO_IRQ_VERSION).tar.gz
+KERNEL_HELLO_IRQ_SITE = https://github.com/Ultrafeel/kernel_hello_irq/archive
+# KERNEL_HELLO_IRQ_SITE:= /home/unencr/Prog_projects/kernel_hello_irq
+# KERNEL_HELLO_IRQ_SITE_METHOD:=local
 KERNEL_HELLO_IRQ_LICENSE = GPLv2
 KERNEL_HELLO_IRQ_LICENSE_FILES = LICENSE
 KERNEL_HELLO_IRQ_INSTALL_STAGING = YES
