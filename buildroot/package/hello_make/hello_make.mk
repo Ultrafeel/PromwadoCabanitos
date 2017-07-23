@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-HELLO_MAKE_VERSION = 1.0.3	
+HELLO_MAKE_VERSION = 1.0.4	
 HELLO_MAKE_SOURCE = static_bv$(HELLO_MAKE_VERSION).tar.gz
 HELLO_MAKE_SITE = https://github.com/Ultrafeel/hello_make/archive
 #HELLO_MAKE_SITE:= /home/unencr/Prog_projects/hello_make
