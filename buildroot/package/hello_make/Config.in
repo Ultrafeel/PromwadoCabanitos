@@ -1,0 +1,8 @@
+config BR2_PACKAGE_HELLO_MAKE
+
+        bool "hello_make"
+        help
+          This is a comment that explains what libfoo is. The help text
+          should be wrapped.
+
+          
