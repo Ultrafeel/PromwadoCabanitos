@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LED_SWITCH
+
+        bool "led_switch"
+        help
+          led_switch lights up led on switch press.
+
+          

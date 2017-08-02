@@ -1444,6 +1444,7 @@ menu "Mail"
 endmenu
 
 menu "Miscellaneous"
+	source "package/led_switch/Config.in"
 	source "package/hello_make/Config.in"
 	source "package/aespipe/Config.in"
 	source "package/bc/Config.in"
