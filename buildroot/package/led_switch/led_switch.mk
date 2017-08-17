@@ -5,10 +5,10 @@
 ################################################################################
 
 LED_SWITCH_VERSION = 1.1
-#LED_SWITCH_SOURCE = static_bv$(LED_SWITCH_VERSION).tar.gz
-#LED_SWITCH_SITE = https://github.com/Ultrafeel/led_switch/archive
-LED_SWITCH_SITE:= /home/unencr/Prog_projects/led_switch
-LED_SWITCH_SITE_METHOD:=local
+LED_SWITCH_SOURCE = v$(LED_SWITCH_VERSION).tar.gz
+LED_SWITCH_SITE = https://github.com/Ultrafeel/led_switch/archive
+#LED_SWITCH_SITE:= /home/unencr/Prog_projects/led_switch
+#LED_SWITCH_SITE_METHOD:=local
 LED_SWITCH_LICENSE = GPLv2
 LED_SWITCH_LICENSE_FILES = LICENSE
 LED_SWITCH_INSTALL_STAGING = YES
