@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-LED_SWITCH_VERSION = 1.1.8	
+LED_SWITCH_VERSION = 1.1
 #LED_SWITCH_SOURCE = static_bv$(LED_SWITCH_VERSION).tar.gz
 #LED_SWITCH_SITE = https://github.com/Ultrafeel/led_switch/archive
 LED_SWITCH_SITE:= /home/unencr/Prog_projects/led_switch
@@ -37,7 +37,7 @@ define LED_SWITCH_INSTALL_TARGET_CMDS
 #@echo ooo LINUX_VERSION = $(LINUX_VERSION ) BINARIES_DIR=$(BINARIES_DIR) BASE_DIR=$(BASE_DIR) ooo
 #led_switch.ko ./$(TARGETDIR)/lib/modules/$(KERNEL_VERSION)/
 $(INSTALL) -D -m 0755 $(@D)/target_bin/bin/led_switch $(TARGET_DIR)/bin/
-#$(INSTALL) -D -m 0755 $(@D)/S11load_led_switch.sh $(TARGET_DIR)/etc/init.d/
+$(INSTALL) -D -m 0755 $(@D)/S21load_led_switch.sh $(TARGET_DIR)/etc/init.d/
 #$(INSTALL) -D -m 0755 $(@D)/test.sh $(TARGET_DIR)/bin/test_hello_irq.sh
 endef
 
